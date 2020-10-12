@@ -64,6 +64,7 @@ const usersChoices =() => {
                             console.log(`You learn that the humans name is Grace. \n She comes from a planet called Earth and they came to Pandora with a 100 more people. \nThey came to explore the new world they have found.  \n`)
                                 let toDoWithGrace = prompt.question(
                                    `Next you need to decide what to do with Grace. \nA. You show her your ways and teach her to see the world in the way you do.\nB. You turn her away and send her back to her people\n`)
+                                   toDoWithGrace = toDoWithGrace.toUpperCase();
                                    if (toDoWithGrace == 'A'){
                                     console.log(`You work with Grace day by day. You show her everything about Pandora and how everything is living in balance creating this perfect world. \nGrace realizes that what the rest of the humans want to do will destroy Pandora, and it is useless without the Na’vi. \nShe realizes she has to save this planet from dying. \n`)
                                     console.log(`Grace approaches you and tells you that her peoples plan is to destroy Pandora \njust for it's natural resources. Grace tells you she is on your side and wants to show them your ways \nby teaching them to see the world the way you do.\n`)
