@@ -7,7 +7,7 @@ const H = "grace"
 const playAgain = () => {
     let playAgain = prompt.question('Do you want to play again? Y | N \n');
     playAgain = playAgain.toUpperCase();
-    if (playAgain === 'y') {
+    if (playAgain === 'Y') {
         avatarChoice(); usersChoices();
     } else {
       console.log('Thanks for playing.\nGoodbye.');
@@ -59,10 +59,9 @@ const usersChoices =() => {
             console.log(`The human wakes up and you have to figure out who they are and what they want.\n How do you proceed?\n`)
                 let knowTheHuman = prompt.question(
                     `A. You are nice to the human\nB. You are mean to the human\n`)
-                    knowTheHuman = knowTheHuman.toUpperCase
+                    knowTheHuman = knowTheHuman.toUpperCase();
                         if (knowTheHuman == 'A'){
                             console.log(`You learn that the humans name is Grace. \n She comes from a planet called Earth and they came to Pandora with a 100 more people. \nThey came to explore the new world they have found.  \n`)
-                            knowTheHuman = knowTheHuman.toUpperCase();
                                 let toDoWithGrace = prompt.question(
                                    `Next you need to decide what to do with Grace. \nA. You show her your ways and teach her to see the world in the way you do.\nB. You turn her away and send her back to her people\n`)
                                    if (toDoWithGrace == 'A'){
