@@ -4,6 +4,16 @@ const N = "Neytiri"
 const T = "Tsu'tey"
 const H = "grace"
 
+const playAgain = () => {
+    let playAgain = prompt.question('Do you want to play again? Y | N \n');
+    playAgain = playAgain.toUpperCase();
+    if (playAgain === 'y') {
+        avatarChoice(); usersChoices();
+    } else {
+      console.log('Thanks for playing.\nGoodbye.');
+    }
+  };
+
 const savingTheWorld = () =>{
     console.log(`The humans learn about everything you have and more come to your world. \n As they start to take over one area at a time, and you have to decide what to do about it.\n`)
     let saveTheWorld = prompt.question(
@@ -11,13 +21,13 @@ const savingTheWorld = () =>{
         saveTheWorld = saveTheWorld.toUpperCase();
         if (saveTheWorld == 'A'){
                 console.log(`You and your tribe die and Pandora falls\n You lose!\n`)
-                
+                playAgain();
             } else if (saveTheWorld == 'B'){
                 console.log(`You and your tribe die and Pandora falls\n You lose!\n`)
-                
+                playAgain();
             } else{
                 console.log(`There is a war on Pandora and the land is destroyed. Most of the life in the war was lost and it is unclear if life will ever recover. Pandora will never be the same.\n You lose!\n`)
-               
+                playAgain();
             }
 
     return saveTheWorld;
@@ -37,9 +47,10 @@ let usersAvatarChoice = prompt.question(
             console.log(`Asleep in the tree, ${T} heard a rustling sound from the east, he goes to examine the noise.\n`)
             console.log(`As he stalked through the trees he see a stranger... a human and she is injured.\n`)
    }
-   return avatarChoice
+   return avatarChoice;
 }
 avatarChoice();
+const usersChoices =() => {
    let helpChoice = prompt.question(
     `Should you help her? Y | N \n`)
     helpChoice = helpChoice.toUpperCase();
@@ -83,6 +94,7 @@ avatarChoice();
                                                                                 finalQuestion = finalQuestion.toUpperCase();
                                                                                 if (finalQuestion == 'Y'){
                                                                                         console.log(`Congratulations you created peace between the worlds. The humans learned how fragile the world of Pandora is and how they need to protect it. \nMost of the humans return to their life on Earth, while Grace and a select few who fell in love with Pandora and their way of life, decided to stay… \nONLY if Eywa accepted them as they go through a permanent transformation from Avatar/human to true Na’vi.\n`)
+                                                                                        playAgain();
                                                                                     } else {savingTheWorld()}}
                                                          } else { 
                                                              console.log(`Grace is forced to go back on her own where she is tortured for information about your tribe!\n`)
@@ -98,17 +110,8 @@ avatarChoice();
                     } else {
                         console.log(`The human manages to get back to her people and tells them all about the “Monsters”\n`)
                             savingTheWorld();}
+
+                        return usersChoices;}
                     
+ usersChoices();
 
-
-
-    //  const playAgain = () => {
-    //          let playAgain = prompt.question('Do you want to play again? y || n \n');
-    //            playAgain = playAgain.toLowerCase();
-    //           if (playAgain === 'y') {
-    //             ChoosingAvatar();
-    //           }
-    //         return playAgain;
-    //         }
-                 
-    
