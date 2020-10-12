@@ -22,7 +22,7 @@ const savingTheWorld = () =>{
 
     return saveTheWorld;
 }
-
+const avatarChoice =() => {
 let usersAvatarChoice = prompt.question(
     `Choose your avatar:\n N: ${N}\n T: ${T}\n`)
     usersAvatarChoice = usersAvatarChoice.toUpperCase();
@@ -37,7 +37,9 @@ let usersAvatarChoice = prompt.question(
             console.log(`Asleep in the tree, ${T} heard a rustling sound from the east, he goes to examine the noise.\n`)
             console.log(`As he stalked through the trees he see a stranger... a human and she is injured.\n`)
    }
-
+   return avatarChoice
+}
+avatarChoice();
    let helpChoice = prompt.question(
     `Should you help her? Y | N \n`)
     helpChoice = helpChoice.toUpperCase();
@@ -91,7 +93,7 @@ let usersAvatarChoice = prompt.question(
                                             } else {
                                                     savingTheWorld();}
                                 } else {
-                                    Console.log(`The human manages to get back to her people and tells them all about the “Monsters”\n`)
+                                    console.log(`The human manages to get back to her people and tells them all about the “Monsters”\n`)
                                         savingTheWorld();}
                     } else {
                         console.log(`The human manages to get back to her people and tells them all about the “Monsters”\n`)
